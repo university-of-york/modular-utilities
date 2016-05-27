@@ -31,11 +31,11 @@ When you have added all your modules to the Media Library and updated their name
 
 ### `require`ing modules
 
-Within a PL, you must first of all load up the `require` script. This bit is not very elegant, as it relies on native classes and `eval()`.
+Within a PL, you must first of all load up the `require` script. This bit is not very elegant, as it relies on native classes and `eval()`. You'll need to replace `id="xxxx" with the ID of your `require.js` file.
 
 ```
 importClass(com.terminalfour.publish.utils.BrokerUtils);
-var r = eval(String(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" id="460177" formatter="inline/*" />')));
+var r = eval(String(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, '<t4 type="media" id="xxxx" formatter="inline/*" />')));
 ```
 
 Now you hav a variable `r` which has a `require` method which you can use to import the functionality from your modules.
