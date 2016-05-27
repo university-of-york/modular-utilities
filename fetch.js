@@ -10,7 +10,7 @@
    * Module information
    */
   name: "Fetch",
-  description: "Fetching external files"
+  description: "Fetching external files",
   version: "0.0.1",
   author: {
     name: "University of York Digital Team",
@@ -182,9 +182,24 @@
    */
   getJSON: function(options, onComplete) {
 
-    return this.fetch(options, function(output) {
+    return this.get(options, function(output) {
       onComplete(JSON.parse(output));
     });
+  },
+
+  /**
+   * Function to make filename from URL
+   *
+   * @param url  The URL to convert to a string
+   *
+   * @return     A filename (String)
+   *
+   */
+  makeFilename: function(url) {
+    url = ''+url; // Make sure it's a string!
+    url = url.replace(':', '');
+    url = url.replace(/\//g, '-');
+    return url;
   },
 
   /**

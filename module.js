@@ -11,7 +11,7 @@
    * Module information
    */
   name: "My module",
-  description: "The basis for new modules. Please keep this updated"
+  description: "The basis for new modules. Please keep this updated",
   version: "0.0.1",
   author: {
     name: "University of York Digital Team",

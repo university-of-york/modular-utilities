@@ -10,7 +10,7 @@
    * Module information
    */
   name: "TERMINALFOUR",
-  description: "Functions related to TERMINALFOUR"
+  description: "Functions related to TERMINALFOUR",
   version: "0.0.1",
   author: "Paul Kelly (T4)",
 
@@ -20,27 +20,21 @@
   copyright: "TERMINALFOUR",
 
   /**
-   * Functions to get information about the TERMINALFOUR installation.
+   * Get the TERMINALFOUR version number.
+   *
+   * @return Version number (String)
    */
-  t4: {
+  version: function() {
+    return com.terminalfour.sitemanager.SiteManagerVersion.version;
+  },
 
-    /**
-     * Get the TERMINALFOUR version number.
-     *
-     * @return Version number (String)
-     */
-    version: function() {
-      return com.terminalfour.sitemanager.SiteManagerVersion.version;
-    },
-
-    /**
-     * Get the TERMINALFOUR build details.
-     *
-     * @return Build details (String)
-     */
-    buildDetails: function() {
-      return com.terminalfour.sitemanager.SiteManagerVersion.buildDetails;
-    }
+  /**
+   * Get the TERMINALFOUR build details.
+   *
+   * @return Build details (String)
+   */
+  buildDetails: function() {
+    return com.terminalfour.sitemanager.SiteManagerVersion.buildDetails;
   },
 
   /**

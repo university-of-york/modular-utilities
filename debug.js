@@ -11,7 +11,7 @@
    * Module information
    */
   name: "Debug",
-  description: "TEsting, debugging and troubleshooting."
+  description: "TEsting, debugging and troubleshooting.",
   version: "0.0.1",
   author: {
     name: "University of York Digital Team",
