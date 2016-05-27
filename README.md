@@ -40,6 +40,15 @@ var r = eval(String(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbS
 
 Now you hav a variable `r` which has a `require` method which you can use to import the functionality from your modules.
 
+```
+var fetch = r.require('fetch');
+fetch.getJSON('http://example.com/somedata.json', callback);
+```
+
 ## Adding a new module
 
+Included in this repo is a `module.js` file, which can be used as the basis of wach new module. It contains information about the module (a bit like a `package.json` file in a node module), all the methods and properties to be made available to the module, and an `init` function that is deleted when it's run. This makes the module available to be `eval`d.
+
 ## Contributing
+
+It would be great to get feedback and advice on how the `require` function could be made better, and to have a good central repository of modules for common use cases. Feel free to send us a pull request or share modules of your own.
